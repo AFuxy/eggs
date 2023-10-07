@@ -16,7 +16,7 @@
         "Java 18: Newest": "ghcr.io\/pterodactyl\/yolks:java_18"
     },
     "file_denylist": [],
-    "startup": "java -jar {{SERVER_JARFILE}} nogui -Xms128M -XX:MaxRAMPercentage=95.0",
+    "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar {{SERVER_JARFILE}}",
     "config": {
         "files": "{\r\n    \"server.properties\": {\r\n        \"parser\": \"properties\",\r\n        \"find\": {\r\n            \"server-ip\": \"0.0.0.0\",\r\n            \"enable-query\": \"true\",\r\n            \"server-port\": \"{{server.build.default.port}}\"\r\n        }\r\n    }\r\n}",
         "startup": "{\r\n    \"done\": \")! For help, type \",\r\n    \"userInteraction\": [\r\n        \"Go to eula.txt for more info.\"\r\n    ]\r\n}",
